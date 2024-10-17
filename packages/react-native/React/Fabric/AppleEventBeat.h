@@ -18,14 +18,12 @@ namespace facebook::react {
  * The beat is called on `RuntimeExecutor`'s thread induced by the UI thread
  * event loop.
  */
-class AsynchronousEventBeat : public EventBeat,
-                              public RunLoopObserver::Delegate {
+class AppleEventBeat : public EventBeat, public RunLoopObserver::Delegate {
  public:
-  AsynchronousEventBeat(
+  AppleEventBeat(
+      std::shared_ptr<OwnerBox> ownerBox,
       RunLoopObserver::Unique uiRunLoopObserver,
       RuntimeExecutor runtimeExecutor);
-
-  void induce() const override;
 
 #pragma mark - RunLoopObserver::Delegate
 
@@ -35,9 +33,6 @@ class AsynchronousEventBeat : public EventBeat,
 
  private:
   RunLoopObserver::Unique uiRunLoopObserver_;
-  RuntimeExecutor runtimeExecutor_;
-
-  mutable std::atomic<bool> isBeatCallbackScheduled_{false};
 };
 
 } // namespace facebook::react

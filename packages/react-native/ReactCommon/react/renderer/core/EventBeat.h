@@ -7,6 +7,7 @@
 
 #pragma once
 
+#include <ReactCommon/RuntimeExecutor.h>
 #include <atomic>
 #include <functional>
 #include <memory>
@@ -41,16 +42,21 @@ class EventBeat {
   struct OwnerBox {
     Owner owner;
   };
-  using SharedOwnerBox = std::shared_ptr<OwnerBox>;
 
-  using Factory =
-      std::function<std::unique_ptr<EventBeat>(const SharedOwnerBox& ownerBox)>;
+  using Factory = std::function<std::unique_ptr<EventBeat>(
+      std::shared_ptr<OwnerBox> ownerBox)>;
 
   using BeatCallback = std::function<void(jsi::Runtime& runtime)>;
 
-  EventBeat(SharedOwnerBox ownerBox);
+  explicit EventBeat(
+      std::shared_ptr<OwnerBox> ownerBox,
+      RuntimeExecutor runtimeExecutor);
 
   virtual ~EventBeat() = default;
+
+  // not copyable
+  EventBeat(const EventBeat& other) = delete;
+  EventBeat& operator=(const EventBeat& other) = delete;
 
   /*
    * Communicates to the Beat that a consumer is waiting for the coming beat.
@@ -60,7 +66,6 @@ class EventBeat {
   virtual void request() const;
 
   /*
-   * Sets the beat callback function.
    * The callback is must be called on the proper thread.
    */
   void setBeatCallback(BeatCallback beatCallback);
@@ -70,11 +75,15 @@ class EventBeat {
    * Induces the next beat to happen as soon as possible.
    * Receiver might ignore the call if a beat was not requested.
    */
-  virtual void induce() const;
+  void induce() const;
 
   BeatCallback beatCallback_;
-  SharedOwnerBox ownerBox_;
+  std::shared_ptr<OwnerBox> ownerBox_;
   mutable std::atomic<bool> isRequested_{false};
+
+ private:
+  RuntimeExecutor runtimeExecutor_;
+  mutable std::atomic<bool> isBeatCallbackScheduled_{false};
 };
 
 } // namespace facebook::react
