@@ -4,7 +4,7 @@
  * This source code is licensed under the MIT license found in the
  * LICENSE file in the root directory of this source tree.
  *
- * @generated SignedSource<<fcfded14a5fe05501892993c1f58f3ed>>
+ * @generated SignedSource<<b92feb26341cd20ea526620ffef11352>>
  */
 
 /**
@@ -54,13 +54,13 @@ public object ReactNativeFeatureFlagsCxxInterop {
 
   @DoNotStrip @JvmStatic public external fun enableFabricRenderer(): Boolean
 
-  @DoNotStrip @JvmStatic public external fun enableFabricRendererExclusively(): Boolean
-
   @DoNotStrip @JvmStatic public external fun enableFixForViewCommandRace(): Boolean
 
   @DoNotStrip @JvmStatic public external fun enableGranularShadowTreeStateReconciliation(): Boolean
 
   @DoNotStrip @JvmStatic public external fun enableIOSViewClipToPaddingBox(): Boolean
+
+  @DoNotStrip @JvmStatic public external fun enableImagePrefetchingAndroid(): Boolean
 
   @DoNotStrip @JvmStatic public external fun enableLayoutAnimationsOnAndroid(): Boolean
 
@@ -83,6 +83,8 @@ public object ReactNativeFeatureFlagsCxxInterop {
   @DoNotStrip @JvmStatic public external fun enableViewRecycling(): Boolean
 
   @DoNotStrip @JvmStatic public external fun excludeYogaFromRawProps(): Boolean
+
+  @DoNotStrip @JvmStatic public external fun fixDifferentiatorEmittingUpdatesWithWrongParentTag(): Boolean
 
   @DoNotStrip @JvmStatic public external fun fixMappingOfEventPrioritiesBetweenFabricAndReact(): Boolean
 
@@ -111,6 +113,8 @@ public object ReactNativeFeatureFlagsCxxInterop {
   @DoNotStrip @JvmStatic public external fun useOptimisedViewPreallocationOnAndroid(): Boolean
 
   @DoNotStrip @JvmStatic public external fun useOptimizedEventBatchingOnAndroid(): Boolean
+
+  @DoNotStrip @JvmStatic public external fun useRawPropsJsiValue(): Boolean
 
   @DoNotStrip @JvmStatic public external fun useRuntimeShadowNodeReferenceUpdate(): Boolean
 

@@ -4,7 +4,7 @@
  * This source code is licensed under the MIT license found in the
  * LICENSE file in the root directory of this source tree.
  *
- * @generated SignedSource<<0b07eaeba8112f65ecb18d53b7b893af>>
+ * @generated SignedSource<<cf7e9685a1739386706934b8c249ed03>>
  */
 
 /**
@@ -69,9 +69,6 @@ class JReactNativeFeatureFlagsCxxInterop
   static bool enableFabricRenderer(
     facebook::jni::alias_ref<JReactNativeFeatureFlagsCxxInterop>);
 
-  static bool enableFabricRendererExclusively(
-    facebook::jni::alias_ref<JReactNativeFeatureFlagsCxxInterop>);
-
   static bool enableFixForViewCommandRace(
     facebook::jni::alias_ref<JReactNativeFeatureFlagsCxxInterop>);
 
@@ -79,6 +76,9 @@ class JReactNativeFeatureFlagsCxxInterop
     facebook::jni::alias_ref<JReactNativeFeatureFlagsCxxInterop>);
 
   static bool enableIOSViewClipToPaddingBox(
+    facebook::jni::alias_ref<JReactNativeFeatureFlagsCxxInterop>);
+
+  static bool enableImagePrefetchingAndroid(
     facebook::jni::alias_ref<JReactNativeFeatureFlagsCxxInterop>);
 
   static bool enableLayoutAnimationsOnAndroid(
@@ -112,6 +112,9 @@ class JReactNativeFeatureFlagsCxxInterop
     facebook::jni::alias_ref<JReactNativeFeatureFlagsCxxInterop>);
 
   static bool excludeYogaFromRawProps(
+    facebook::jni::alias_ref<JReactNativeFeatureFlagsCxxInterop>);
+
+  static bool fixDifferentiatorEmittingUpdatesWithWrongParentTag(
     facebook::jni::alias_ref<JReactNativeFeatureFlagsCxxInterop>);
 
   static bool fixMappingOfEventPrioritiesBetweenFabricAndReact(
@@ -154,6 +157,9 @@ class JReactNativeFeatureFlagsCxxInterop
     facebook::jni::alias_ref<JReactNativeFeatureFlagsCxxInterop>);
 
   static bool useOptimizedEventBatchingOnAndroid(
+    facebook::jni::alias_ref<JReactNativeFeatureFlagsCxxInterop>);
+
+  static bool useRawPropsJsiValue(
     facebook::jni::alias_ref<JReactNativeFeatureFlagsCxxInterop>);
 
   static bool useRuntimeShadowNodeReferenceUpdate(
