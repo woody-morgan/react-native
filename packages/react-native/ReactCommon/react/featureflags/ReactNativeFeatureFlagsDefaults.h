@@ -4,7 +4,7 @@
  * This source code is licensed under the MIT license found in the
  * LICENSE file in the root directory of this source tree.
  *
- * @generated SignedSource<<213e1ad83360a79e27d41c06e20fb8c9>>
+ * @generated SignedSource<<14f964cf6d43943bdeed783d28c231e0>>
  */
 
 /**
@@ -40,6 +40,10 @@ class ReactNativeFeatureFlagsDefaults : public ReactNativeFeatureFlagsProvider {
   }
 
   bool disableMountItemReorderingAndroid() override {
+    return false;
+  }
+
+  bool enableAccumulatedUpdatesInRawPropsAndroid() override {
     return false;
   }
 
@@ -79,10 +83,6 @@ class ReactNativeFeatureFlagsDefaults : public ReactNativeFeatureFlagsProvider {
     return false;
   }
 
-  bool enableFabricRendererExclusively() override {
-    return false;
-  }
-
   bool enableFixForViewCommandRace() override {
     return false;
   }
@@ -92,6 +92,10 @@ class ReactNativeFeatureFlagsDefaults : public ReactNativeFeatureFlagsProvider {
   }
 
   bool enableIOSViewClipToPaddingBox() override {
+    return false;
+  }
+
+  bool enableImagePrefetchingAndroid() override {
     return false;
   }
 
@@ -137,6 +141,10 @@ class ReactNativeFeatureFlagsDefaults : public ReactNativeFeatureFlagsProvider {
 
   bool excludeYogaFromRawProps() override {
     return false;
+  }
+
+  bool fixDifferentiatorEmittingUpdatesWithWrongParentTag() override {
+    return true;
   }
 
   bool fixMappingOfEventPrioritiesBetweenFabricAndReact() override {
@@ -195,8 +203,12 @@ class ReactNativeFeatureFlagsDefaults : public ReactNativeFeatureFlagsProvider {
     return false;
   }
 
-  bool useRuntimeShadowNodeReferenceUpdate() override {
+  bool useRawPropsJsiValue() override {
     return false;
+  }
+
+  bool useRuntimeShadowNodeReferenceUpdate() override {
+    return true;
   }
 
   bool useTurboModuleInterop() override {

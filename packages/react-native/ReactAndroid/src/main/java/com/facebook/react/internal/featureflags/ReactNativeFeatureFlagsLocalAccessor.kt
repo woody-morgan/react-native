@@ -4,7 +4,7 @@
  * This source code is licensed under the MIT license found in the
  * LICENSE file in the root directory of this source tree.
  *
- * @generated SignedSource<<4bb5173b9ba1d3e620f3a7d613b27ac7>>
+ * @generated SignedSource<<f56022e0738217726e5e7b938666b56e>>
  */
 
 /**
@@ -28,6 +28,7 @@ public class ReactNativeFeatureFlagsLocalAccessor : ReactNativeFeatureFlagsAcces
   private var completeReactInstanceCreationOnBgThreadOnAndroidCache: Boolean? = null
   private var disableEventLoopOnBridgelessCache: Boolean? = null
   private var disableMountItemReorderingAndroidCache: Boolean? = null
+  private var enableAccumulatedUpdatesInRawPropsAndroidCache: Boolean? = null
   private var enableAlignItemsBaselineOnFabricIOSCache: Boolean? = null
   private var enableAndroidLineHeightCenteringCache: Boolean? = null
   private var enableBridgelessArchitectureCache: Boolean? = null
@@ -37,10 +38,10 @@ public class ReactNativeFeatureFlagsLocalAccessor : ReactNativeFeatureFlagsAcces
   private var enableEventEmitterRetentionDuringGesturesOnAndroidCache: Boolean? = null
   private var enableFabricLogsCache: Boolean? = null
   private var enableFabricRendererCache: Boolean? = null
-  private var enableFabricRendererExclusivelyCache: Boolean? = null
   private var enableFixForViewCommandRaceCache: Boolean? = null
   private var enableGranularShadowTreeStateReconciliationCache: Boolean? = null
   private var enableIOSViewClipToPaddingBoxCache: Boolean? = null
+  private var enableImagePrefetchingAndroidCache: Boolean? = null
   private var enableLayoutAnimationsOnAndroidCache: Boolean? = null
   private var enableLayoutAnimationsOnIOSCache: Boolean? = null
   private var enableLongTaskAPICache: Boolean? = null
@@ -52,6 +53,7 @@ public class ReactNativeFeatureFlagsLocalAccessor : ReactNativeFeatureFlagsAcces
   private var enableUIConsistencyCache: Boolean? = null
   private var enableViewRecyclingCache: Boolean? = null
   private var excludeYogaFromRawPropsCache: Boolean? = null
+  private var fixDifferentiatorEmittingUpdatesWithWrongParentTagCache: Boolean? = null
   private var fixMappingOfEventPrioritiesBetweenFabricAndReactCache: Boolean? = null
   private var fixMountingCoordinatorReportedPendingTransactionsOnAndroidCache: Boolean? = null
   private var fuseboxEnabledDebugCache: Boolean? = null
@@ -66,6 +68,7 @@ public class ReactNativeFeatureFlagsLocalAccessor : ReactNativeFeatureFlagsAcces
   private var useNativeViewConfigsInBridgelessModeCache: Boolean? = null
   private var useOptimisedViewPreallocationOnAndroidCache: Boolean? = null
   private var useOptimizedEventBatchingOnAndroidCache: Boolean? = null
+  private var useRawPropsJsiValueCache: Boolean? = null
   private var useRuntimeShadowNodeReferenceUpdateCache: Boolean? = null
   private var useTurboModuleInteropCache: Boolean? = null
   private var useTurboModulesCache: Boolean? = null
@@ -106,6 +109,16 @@ public class ReactNativeFeatureFlagsLocalAccessor : ReactNativeFeatureFlagsAcces
       cached = currentProvider.disableMountItemReorderingAndroid()
       accessedFeatureFlags.add("disableMountItemReorderingAndroid")
       disableMountItemReorderingAndroidCache = cached
+    }
+    return cached
+  }
+
+  override fun enableAccumulatedUpdatesInRawPropsAndroid(): Boolean {
+    var cached = enableAccumulatedUpdatesInRawPropsAndroidCache
+    if (cached == null) {
+      cached = currentProvider.enableAccumulatedUpdatesInRawPropsAndroid()
+      accessedFeatureFlags.add("enableAccumulatedUpdatesInRawPropsAndroid")
+      enableAccumulatedUpdatesInRawPropsAndroidCache = cached
     }
     return cached
   }
@@ -200,16 +213,6 @@ public class ReactNativeFeatureFlagsLocalAccessor : ReactNativeFeatureFlagsAcces
     return cached
   }
 
-  override fun enableFabricRendererExclusively(): Boolean {
-    var cached = enableFabricRendererExclusivelyCache
-    if (cached == null) {
-      cached = currentProvider.enableFabricRendererExclusively()
-      accessedFeatureFlags.add("enableFabricRendererExclusively")
-      enableFabricRendererExclusivelyCache = cached
-    }
-    return cached
-  }
-
   override fun enableFixForViewCommandRace(): Boolean {
     var cached = enableFixForViewCommandRaceCache
     if (cached == null) {
@@ -236,6 +239,16 @@ public class ReactNativeFeatureFlagsLocalAccessor : ReactNativeFeatureFlagsAcces
       cached = currentProvider.enableIOSViewClipToPaddingBox()
       accessedFeatureFlags.add("enableIOSViewClipToPaddingBox")
       enableIOSViewClipToPaddingBoxCache = cached
+    }
+    return cached
+  }
+
+  override fun enableImagePrefetchingAndroid(): Boolean {
+    var cached = enableImagePrefetchingAndroidCache
+    if (cached == null) {
+      cached = currentProvider.enableImagePrefetchingAndroid()
+      accessedFeatureFlags.add("enableImagePrefetchingAndroid")
+      enableImagePrefetchingAndroidCache = cached
     }
     return cached
   }
@@ -346,6 +359,16 @@ public class ReactNativeFeatureFlagsLocalAccessor : ReactNativeFeatureFlagsAcces
       cached = currentProvider.excludeYogaFromRawProps()
       accessedFeatureFlags.add("excludeYogaFromRawProps")
       excludeYogaFromRawPropsCache = cached
+    }
+    return cached
+  }
+
+  override fun fixDifferentiatorEmittingUpdatesWithWrongParentTag(): Boolean {
+    var cached = fixDifferentiatorEmittingUpdatesWithWrongParentTagCache
+    if (cached == null) {
+      cached = currentProvider.fixDifferentiatorEmittingUpdatesWithWrongParentTag()
+      accessedFeatureFlags.add("fixDifferentiatorEmittingUpdatesWithWrongParentTag")
+      fixDifferentiatorEmittingUpdatesWithWrongParentTagCache = cached
     }
     return cached
   }
@@ -486,6 +509,16 @@ public class ReactNativeFeatureFlagsLocalAccessor : ReactNativeFeatureFlagsAcces
       cached = currentProvider.useOptimizedEventBatchingOnAndroid()
       accessedFeatureFlags.add("useOptimizedEventBatchingOnAndroid")
       useOptimizedEventBatchingOnAndroidCache = cached
+    }
+    return cached
+  }
+
+  override fun useRawPropsJsiValue(): Boolean {
+    var cached = useRawPropsJsiValueCache
+    if (cached == null) {
+      cached = currentProvider.useRawPropsJsiValue()
+      accessedFeatureFlags.add("useRawPropsJsiValue")
+      useRawPropsJsiValueCache = cached
     }
     return cached
   }

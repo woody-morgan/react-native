@@ -4,7 +4,7 @@
  * This source code is licensed under the MIT license found in the
  * LICENSE file in the root directory of this source tree.
  *
- * @generated SignedSource<<2217f2b9992c9424c3d1d221bdfa2236>>
+ * @generated SignedSource<<94d6ce778ccf52a7f7b2ab574b1c9547>>
  */
 
 /**
@@ -31,6 +31,8 @@ public interface ReactNativeFeatureFlagsProvider {
 
   @DoNotStrip public fun disableMountItemReorderingAndroid(): Boolean
 
+  @DoNotStrip public fun enableAccumulatedUpdatesInRawPropsAndroid(): Boolean
+
   @DoNotStrip public fun enableAlignItemsBaselineOnFabricIOS(): Boolean
 
   @DoNotStrip public fun enableAndroidLineHeightCentering(): Boolean
@@ -49,13 +51,13 @@ public interface ReactNativeFeatureFlagsProvider {
 
   @DoNotStrip public fun enableFabricRenderer(): Boolean
 
-  @DoNotStrip public fun enableFabricRendererExclusively(): Boolean
-
   @DoNotStrip public fun enableFixForViewCommandRace(): Boolean
 
   @DoNotStrip public fun enableGranularShadowTreeStateReconciliation(): Boolean
 
   @DoNotStrip public fun enableIOSViewClipToPaddingBox(): Boolean
+
+  @DoNotStrip public fun enableImagePrefetchingAndroid(): Boolean
 
   @DoNotStrip public fun enableLayoutAnimationsOnAndroid(): Boolean
 
@@ -78,6 +80,8 @@ public interface ReactNativeFeatureFlagsProvider {
   @DoNotStrip public fun enableViewRecycling(): Boolean
 
   @DoNotStrip public fun excludeYogaFromRawProps(): Boolean
+
+  @DoNotStrip public fun fixDifferentiatorEmittingUpdatesWithWrongParentTag(): Boolean
 
   @DoNotStrip public fun fixMappingOfEventPrioritiesBetweenFabricAndReact(): Boolean
 
@@ -106,6 +110,8 @@ public interface ReactNativeFeatureFlagsProvider {
   @DoNotStrip public fun useOptimisedViewPreallocationOnAndroid(): Boolean
 
   @DoNotStrip public fun useOptimizedEventBatchingOnAndroid(): Boolean
+
+  @DoNotStrip public fun useRawPropsJsiValue(): Boolean
 
   @DoNotStrip public fun useRuntimeShadowNodeReferenceUpdate(): Boolean
 
